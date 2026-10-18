@@ -45,7 +45,12 @@
     </filter>
   </defs>
 
-  <radialGradient id="lite" cx="50%" cy="40%" r="75%"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#c9d1df"/></radialGradient><rect width="256" height="256" fill="url(#lite)"/>
+  <linearGradient id="sheen" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity="0.55"/><stop offset="0.5" stop-color="#fff" stop-opacity="0.18"/><stop offset="1" stop-color="#fff" stop-opacity="0.32"/></linearGradient>
+  <filter id="frost" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="22"/></filter>
+  <rect width="256" height="256" fill="url(#sheen)"/>
+  <circle cx="84" cy="94" r="70" fill="#5b86d6" opacity="0.55" filter="url(#frost)"/>
+  <circle cx="172" cy="162" r="70" fill="#e2c252" opacity="0.5" filter="url(#frost)"/>
+  <rect x="1.5" y="1.5" width="253" height="253" rx="56" fill="none" stroke="#fff" stroke-opacity="0.6" stroke-width="3"/>
 
   <!-- DOGE coin (back) -->
   <g filter="url(#shadow)">
