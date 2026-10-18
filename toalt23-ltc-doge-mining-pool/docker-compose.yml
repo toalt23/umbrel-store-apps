@@ -4,29 +4,29 @@ services:
 
   app_proxy:
     environment:
- Umbrel creates this from data/dogecoin/.gitkeep, owned by uid 1000APP_HOST: toalt23-ltc-doge-mining-pool_web_1
- Umbrel creates this from data/dogecoin/.gitkeep, owned by uid 1000APP_PORT: 3000
+      APP_HOST: toalt23-ltc-doge-mining-pool_web_1
+      APP_PORT: 3000
 
   web:
     image: toalt23/ltc-doge-mining-pool-web:latest
     init: true
     restart: on-failure
     environment:
- Umbrel creates this from data/dogecoin/.gitkeep, owned by uid 1000DATA_DIR: /data
- Umbrel creates this from data/dogecoin/.gitkeep, owned by uid 1000LTC_RPC_HOST: toalt23-ltc-doge-mining-pool_litecoind_1
- Umbrel creates this from data/dogecoin/.gitkeep, owned by uid 1000LTC_RPC_PORT: "9332"
- Umbrel creates this from data/dogecoin/.gitkeep, owned by uid 1000LTC_RPC_USER: ltcrpc
- Umbrel creates this from data/dogecoin/.gitkeep, owned by uid 1000LTC_RPC_PASSWORD: ${APP_PASSWORD}
- Umbrel creates this from data/dogecoin/.gitkeep, owned by uid 1000DOGE_RPC_HOST: toalt23-ltc-doge-mining-pool_dogecoind_1
- Umbrel creates this from data/dogecoin/.gitkeep, owned by uid 1000DOGE_RPC_PORT: "22555"
- Umbrel creates this from data/dogecoin/.gitkeep, owned by uid 1000DOGE_RPC_USER: dogerpc
- Umbrel creates this from data/dogecoin/.gitkeep, owned by uid 1000DOGE_RPC_PASSWORD: ${APP_PASSWORD}
+      DATA_DIR: /data
+      LTC_RPC_HOST: toalt23-ltc-doge-mining-pool_litecoind_1
+      LTC_RPC_PORT: "9332"
+      LTC_RPC_USER: ltcrpc
+      LTC_RPC_PASSWORD: ${APP_PASSWORD}
+      DOGE_RPC_HOST: toalt23-ltc-doge-mining-pool_dogecoind_1
+      DOGE_RPC_PORT: "22555"
+      DOGE_RPC_USER: dogerpc
+      DOGE_RPC_PASSWORD: ${APP_PASSWORD}
     volumes:
- Umbrel creates this from data/dogecoin/.gitkeep, owned by uid 1000# Config (payout addresses); same disk as the chains, used for free-space stats
- Umbrel creates this from data/dogecoin/.gitkeep, owned by uid 1000- ${APP_DATA_DIR}/data/app:/data
+      # Config (payout addresses); same disk as the chains, used for free-space stats
+      - ${APP_DATA_DIR}/data/app:/data
     depends_on:
- Umbrel creates this from data/dogecoin/.gitkeep, owned by uid 1000- litecoind
- Umbrel creates this from data/dogecoin/.gitkeep, owned by uid 1000- dogecoind
+      - litecoind
+      - dogecoind
 
   litecoind:
     image: litecoinproject/litecoin-core:0.21.5.8
@@ -36,15 +36,15 @@ services:
     stop_grace_period: 2m
     # args starting with "-" go to litecoind, the entrypoint adds -datadir
     command:
- Umbrel creates this from data/dogecoin/.gitkeep, owned by uid 1000- -printtoconsole
- Umbrel creates this from data/dogecoin/.gitkeep, owned by uid 1000- -server=1
- Umbrel creates this from data/dogecoin/.gitkeep, owned by uid 1000- -rpcbind=0.0.0.0
- Umbrel creates this from data/dogecoin/.gitkeep, owned by uid 1000- -rpcallowip=0.0.0.0/0
- Umbrel creates this from data/dogecoin/.gitkeep, owned by uid 1000- -rpcuser=ltcrpc
- Umbrel creates this from data/dogecoin/.gitkeep, owned by uid 1000- -rpcpassword=${APP_PASSWORD}
- Umbrel creates this from data/dogecoin/.gitkeep, owned by uid 1000- -dbcache=512
+      - -printtoconsole
+      - -server=1
+      - -rpcbind=0.0.0.0
+      - -rpcallowip=0.0.0.0/0
+      - -rpcuser=ltcrpc
+      - -rpcpassword=${APP_PASSWORD}
+      - -dbcache=512
     volumes:
- Umbrel creates this from data/dogecoin/.gitkeep, owned by uid 1000- ${APP_DATA_DIR}/data/litecoin:/home/litecoin/.litecoin
+      - ${APP_DATA_DIR}/data/litecoin:/home/litecoin/.litecoin
 
   dogecoind:
     image: toalt23/dogecoind:1.14.9-1
@@ -52,15 +52,15 @@ services:
     restart: on-failure
     stop_grace_period: 2m
     command:
- Umbrel creates this from data/dogecoin/.gitkeep, owned by uid 1000- dogecoind
- Umbrel creates this from data/dogecoin/.gitkeep, owned by uid 1000- -datadir=/data
- Umbrel creates this from data/dogecoin/.gitkeep, owned by uid 1000- -printtoconsole
- Umbrel creates this from data/dogecoin/.gitkeep, owned by uid 1000- -server=1
- Umbrel creates this from data/dogecoin/.gitkeep, owned by uid 1000- -rpcbind=0.0.0.0
- Umbrel creates this from data/dogecoin/.gitkeep, owned by uid 1000- -rpcallowip=0.0.0.0/0
- Umbrel creates this from data/dogecoin/.gitkeep, owned by uid 1000- -rpcuser=dogerpc
- Umbrel creates this from data/dogecoin/.gitkeep, owned by uid 1000- -rpcpassword=${APP_PASSWORD}
- Umbrel creates this from data/dogecoin/.gitkeep, owned by uid 1000- -dbcache=512
+      - dogecoind
+      - -datadir=/data
+      - -printtoconsole
+      - -server=1
+      - -rpcbind=0.0.0.0
+      - -rpcallowip=0.0.0.0/0
+      - -rpcuser=dogerpc
+      - -rpcpassword=${APP_PASSWORD}
+      - -dbcache=512
     volumes:
- Umbrel creates this from data/dogecoin/.gitkeep, owned by uid 1000# Umbrel creates this from data/dogecoin/.gitkeep, owned by uid 1000
- Umbrel creates this from data/dogecoin/.gitkeep, owned by uid 1000- ${APP_DATA_DIR}/data/dogecoin:/data
+      # The image fixes ownership itself if Umbrel created it as root
+      - ${APP_DATA_DIR}/data/dogecoin:/data
