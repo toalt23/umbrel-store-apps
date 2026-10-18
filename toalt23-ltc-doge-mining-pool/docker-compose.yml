@@ -11,3 +11,56 @@ services:
     image: toalt23/ltc-doge-mining-pool-web:latest
     init: true
     restart: on-failure
+    environment:
+      DATA_DIR: /data
+      LTC_RPC_HOST: toalt23-ltc-doge-mining-pool_litecoind_1
+      LTC_RPC_PORT: "9332"
+      LTC_RPC_USER: ltcrpc
+      LTC_RPC_PASSWORD: ${APP_PASSWORD}
+      DOGE_RPC_HOST: toalt23-ltc-doge-mining-pool_dogecoind_1
+      DOGE_RPC_PORT: "22555"
+      DOGE_RPC_USER: dogerpc
+      DOGE_RPC_PASSWORD: ${APP_PASSWORD}
+    volumes:
+      # Config (payout addresses); same disk as the chains, used for free-space stats
+      - ${APP_DATA_DIR}/data/app:/data
+    depends_on:
+      - litecoind
+      - dogecoind
+
+  litecoind:
+    image: litecoinproject/litecoin-core:0.21.5.8
+    init: true
+    restart: on-failure
+    # nodes need time to flush their databases on shutdown
+    stop_grace_period: 2m
+    # args starting with "-" go to litecoind, the entrypoint adds -datadir
+    command:
+      - -printtoconsole
+      - -server=1
+      - -rpcbind=0.0.0.0
+      - -rpcallowip=0.0.0.0/0
+      - -rpcuser=ltcrpc
+      - -rpcpassword=${APP_PASSWORD}
+      - -dbcache=512
+    volumes:
+      - ${APP_DATA_DIR}/data/litecoin:/home/litecoin/.litecoin
+
+  dogecoind:
+    image: toalt23/dogecoind:1.14.9
+    init: true
+    restart: on-failure
+    stop_grace_period: 2m
+    command:
+      - dogecoind
+      - -datadir=/data
+      - -printtoconsole
+      - -server=1
+      - -rpcbind=0.0.0.0
+      - -rpcallowip=0.0.0.0/0
+      - -rpcuser=dogerpc
+      - -rpcpassword=${APP_PASSWORD}
+      - -dbcache=512
+    volumes:
+      # Umbrel creates this from data/dogecoin/.gitkeep, owned by uid 1000
+      - ${APP_DATA_DIR}/data/dogecoin:/data
