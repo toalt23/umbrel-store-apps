@@ -4,7 +4,7 @@ name: "Ł+Ð Pool"
 tagline: Litecoin + Dogecoin merged-mining pool with full nodes
 icon: https://raw.githubusercontent.com/toalt23/umbrel-store-apps/master/toalt23-ltc-doge-mining-pool/icon.svg
 category: Development
-version: "0.1.6"
+version: "0.1.7"
 port: 3420
 description: >-
  Ł+Ð Pool provides solo merged-mining (Scrypt) directly to your own Litecoin and Dogecoin nodes.
@@ -16,7 +16,7 @@ repo: https://github.com/toalt23/umbrel-store-apps
 support: https://github.com/toalt23/umbrel-store-apps/issues
 gallery: []
 releaseNotes: >-
-  Simpler sync view: one "Syncing" state per chain (Connect, Sync, Ready) instead of separate header and block steps.
+  More realistic time left during sync, speed shown as blocks/s, app icon with a transparent background.
 dependencies: []
 path: ""
 defaultUsername: ""
