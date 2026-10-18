@@ -1,0 +1,13 @@
+version: "3.7"
+
+services:
+
+  app_proxy:
+    environment:
+      APP_HOST: toalt23-ltc-doge-mining-pool_web_1
+      APP_PORT: 3000
+
+  web:
+    image: toalt23/ltc-doge-mining-pool-web:latest
+    init: true
+    restart: on-failure

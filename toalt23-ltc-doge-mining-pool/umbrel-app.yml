@@ -1,0 +1,23 @@
+manifestVersion: 1
+id: toalt23-ltc-doge-mining-pool
+name: LTC/DOGE Mining Node
+tagline: Litecoin + Dogecoin merged-mining pool with full nodes
+icon: https://raw.githubusercontent.com/toalt23/umbrel-store-apps/master/toalt23-ltc-doge-mining-pool/icon.svg
+category: Development
+version: "0.0.1"
+port: 3420
+description: >-
+ LTC/DOGE Mining Node provides solo merged-mining (Scrypt) directly to your own Litecoin and Dogecoin nodes.
+developer: toalt23
+website: https://github.com/toalt23/umbrel-store-apps
+submitter: toalt23
+submission: https://github.com/toalt23/umbrel-store-apps
+repo: https://github.com/toalt23/umbrel-store-apps
+support: https://github.com/toalt23/umbrel-store-apps/issues
+gallery: []
+releaseNotes: >-
+  First test version: Hello World only.
+dependencies: []
+path: ""
+defaultUsername: ""
+defaultPassword: ""
