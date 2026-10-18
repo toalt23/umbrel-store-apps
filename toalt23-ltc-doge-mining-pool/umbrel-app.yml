@@ -1,13 +1,13 @@
 manifestVersion: 1
 id: toalt23-ltc-doge-mining-pool
-name: "Ł+Ð Node"
+name: "Ł+Ð Mining Node"
 tagline: Litecoin + Dogecoin merged-mining pool with full nodes
 icon: https://raw.githubusercontent.com/toalt23/umbrel-store-apps/master/toalt23-ltc-doge-mining-pool/icon.svg
 category: Development
-version: "0.0.2"
+version: "0.0.3"
 port: 3420
 description: >-
- Ł+Ð Node provides solo merged-mining (Scrypt) directly to your own Litecoin and Dogecoin nodes.
+ Ł+Ð Mining Node provides solo merged-mining (Scrypt) directly to your own Litecoin and Dogecoin nodes.
 developer: toalt23
 website: https://github.com/toalt23/umbrel-store-apps
 submitter: toalt23
@@ -16,7 +16,7 @@ repo: https://github.com/toalt23/umbrel-store-apps
 support: https://github.com/toalt23/umbrel-store-apps/issues
 gallery: []
 releaseNotes: >-
-  New name Ł+Ð Node and frosted glass icon.
+  Display name is now Ł+Ð Mining Node.
 dependencies: []
 path: ""
 defaultUsername: ""

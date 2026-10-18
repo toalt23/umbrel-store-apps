@@ -20,7 +20,7 @@ gewohnt installieren und aktualisieren.
 |---|---|---|
 | **ZEC Mining Node** | `toalt23-zec-mining-pool` | Solo-Mining direkt gegen den eigenen Zcash-Node — Zakura Full Node, ZIP-301 Stratum-Server und Web-UI für Mining-Adresse, Share-Difficulty und Worker-Übersicht. Stratum auf Port `3333`, Web-UI auf Port `3000`. |
 | **Dash Mining Node** | `toalt23-dash-mining-pool` | Solo-Mining direkt gegen den eigenen Dash-Node — Dash Core Full Node (Mainnet) mit Sync-Anzeige; Pool-Funktionen in Entwicklung. Web-UI auf Port `3410`. |
-| **Ł+Ð Node** | `toalt23-ltc-doge-mining-pool` | Merged-Mining (Scrypt) direkt gegen die eigenen Litecoin- und Dogecoin-Nodes; aktuell Testversion (Hello World). Web-UI auf Port `3420`. |
+| **Ł+Ð Mining Node** | `toalt23-ltc-doge-mining-pool` | Merged-Mining (Scrypt) direkt gegen die eigenen Litecoin- und Dogecoin-Nodes; aktuell Testversion (Hello World). Web-UI auf Port `3420`. |
 
 ## Aufbau
 
