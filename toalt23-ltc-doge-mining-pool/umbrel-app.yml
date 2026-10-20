@@ -1,13 +1,15 @@
 manifestVersion: 1
 id: toalt23-ltc-doge-mining-pool
 name: "Ł+Ð Pool"
-tagline: Litecoin + Dogecoin merged-mining pool with full nodes
+tagline: "Work in progress: Litecoin + Dogecoin full nodes, mining not available yet"
 icon: https://raw.githubusercontent.com/toalt23/umbrel-store-apps/master/toalt23-ltc-doge-mining-pool/icon.svg?v=0.1.8
 category: Development
 version: "0.1.8"
 port: 3420
-description: >-
- Ł+Ð Pool provides solo merged-mining (Scrypt) directly to your own Litecoin and Dogecoin nodes.
+description: |-
+  Work in progress. Mining does not work yet.
+
+  Ł+Ð Pool will provide solo merged-mining (Scrypt) directly to your own Litecoin and Dogecoin nodes. Right now it runs both full nodes and shows their sync progress. The pool functions are still in development.
 developer: toalt23
 website: https://github.com/toalt23/umbrel-store-apps
 submitter: toalt23

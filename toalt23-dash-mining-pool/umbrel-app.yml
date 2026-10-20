@@ -1,13 +1,15 @@
 manifestVersion: 1
 id: toalt23-dash-mining-pool
 name: Dash Mining Node
-tagline: Dash Mining Pool with Dash Core full node
+tagline: "Work in progress: Dash full node, mining not available yet"
 icon: https://raw.githubusercontent.com/toalt23/umbrel-store-apps/master/toalt23-dash-mining-pool/icon.svg
 category: Development
 version: "0.1.0"
 port: 3410
-description: >-
- Dash Mining Node provides solo-mining directly to your own node.
+description: |-
+  Work in progress. Mining does not work yet.
+
+  Dash Mining Node will provide solo-mining directly to your own node. Right now it runs a Dash Core full node and shows the sync progress. Pool, Settings and Help are placeholders until mining is ready.
 developer: toalt23
 website: https://github.com/toalt23/umbrel-store-apps
 submitter: toalt23

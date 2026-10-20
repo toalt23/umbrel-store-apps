@@ -4,20 +4,20 @@ name: ZEC Mining Node
 tagline: Solo-mine Zcash on your own full node
 icon: https://raw.githubusercontent.com/toalt23/umbrel-store-apps/master/toalt23-zec-mining-pool/icon.svg
 category: Development
-version: "1.12.3"
+version: "1.12.4"
 port: 3000
 description: |-
-  Mine Zcash solo on your Umbrel. ZEC Mining Node runs a Zakura full node with a built-in stratum pool, so your ASICs get their work straight from your own node. There are no pool fees and no third party in between, and every block you find pays the full miner reward to your own address.
+  Mine Zcash solo on your Umbrel. ZEC Mining Node runs a Zakura full node with a built-in stratum pool, so your Equihash ASICs get their work straight from your own node. There are no pool fees and no third party in between, and every block you find pays the full miner reward to your own address.
 
-  Works with every Zcash ASIC: Antminer Z9 mini, Z9, Z11, Z15 and Z15 Pro, and Innosilicon A9, A9+ and A9++ ZMaster. Point your miners at your Umbrel and follow them live:
+  Follow your mining live:
 
-  - Pool hashrate over 24 hours, 7 days or 30 days
+  - Pool hashrate over 3 hours, a day or 7 days
   - Your chance of finding a block within a day, a week or a month
   - Every worker with its hashrate, reject rate and best share
   - Found blocks on their way to 100 confirmations
   - A leaderboard of your closest calls
 
-  Setup takes a minute: set your payout address, pick your miner and copy the connection details. The first blockchain sync takes several hours. You can set the address and connect your miners while it runs.
+  Setup takes a minute: set your payout address, pick your miner and copy the connection details. The first blockchain sync takes several hours. You can set your payout address while it runs and connect your miners once it is done.
 developer: toalt23
 website: https://github.com/toalt23/umbrel-store-apps
 submitter: toalt23
@@ -31,8 +31,12 @@ gallery:
   - https://raw.githubusercontent.com/toalt23/umbrel-store-apps/master/toalt23-zec-mining-pool/gallery/4-settings.png
   - https://raw.githubusercontent.com/toalt23/umbrel-store-apps/master/toalt23-zec-mining-pool/gallery/5-sync.png
 releaseNotes: >-
-  Settings now has a small "Support development" card with a donation address
-  and QR code.
+  The pool port now opens only once the node has its first mining job, so
+  miners no longer sit connected without work after an app update. Saving your
+  settings shows a calm "Restarting the node" note instead of an error. Long
+  waits read in years and days, small block chances show real digits, and
+  Settings names the difficulties Low, Medium and High. The pool hashrate chart
+  now offers 3 hours, 1 day and 7 days.
 dependencies: []
 path: ""
 defaultUsername: ""
