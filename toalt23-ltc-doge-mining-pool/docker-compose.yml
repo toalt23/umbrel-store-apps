@@ -13,6 +13,8 @@ services:
     restart: on-failure
     environment:
       DATA_DIR: /data
+      LTC_DATA_DIR: /chains/litecoin
+      DOGE_DATA_DIR: /chains/dogecoin
       LTC_RPC_HOST: toalt23-ltc-doge-mining-pool_litecoind_1
       LTC_RPC_PORT: "9332"
       LTC_RPC_USER: ltcrpc
@@ -24,18 +26,23 @@ services:
     volumes:
       # Config (payout addresses); same disk as the chains, used for free-space stats
       - ${APP_DATA_DIR}/data/app:/data
+      # The app writes the node mode here and measures the chainstate size
+      - ${APP_DATA_DIR}/data/litecoin:/chains/litecoin
+      - ${APP_DATA_DIR}/data/dogecoin:/chains/dogecoin
     depends_on:
       - litecoind
       - dogecoind
 
   litecoind:
-    image: litecoinproject/litecoin-core:0.21.5.8
+    image: toalt23/litecoind:0.21.5.8-1
     init: true
     restart: on-failure
     # nodes need time to flush their databases on shutdown
     stop_grace_period: 2m
-    # args starting with "-" go to litecoind, the entrypoint adds -datadir
+    # Waits until the node mode is chosen in the app, then adds -prune
     command:
+      - litecoind
+      - -datadir=/data
       - -printtoconsole
       - -server=1
       - -rpcbind=0.0.0.0
@@ -44,10 +51,11 @@ services:
       - -rpcpassword=${APP_PASSWORD}
       - -dbcache=512
     volumes:
-      - ${APP_DATA_DIR}/data/litecoin:/home/litecoin/.litecoin
+      # The image fixes ownership itself if Umbrel created it as root
+      - ${APP_DATA_DIR}/data/litecoin:/data
 
   dogecoind:
-    image: toalt23/dogecoind:1.14.9-1
+    image: toalt23/dogecoind:1.14.9-2
     init: true
     restart: on-failure
     stop_grace_period: 2m

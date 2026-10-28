@@ -1,15 +1,13 @@
 manifestVersion: 1
 id: toalt23-ltc-doge-mining-pool
-name: "Ł+Ð Pool"
-tagline: "Work in progress: Litecoin + Dogecoin full nodes, mining not available yet"
-icon: https://raw.githubusercontent.com/toalt23/umbrel-store-apps/master/toalt23-ltc-doge-mining-pool/icon.svg?v=0.1.8
+name: "LTC+DOGE Pool"
+tagline: Litecoin + Dogecoin merged-mining pool with full or pruned nodes
+icon: https://raw.githubusercontent.com/toalt23/umbrel-store-apps/master/toalt23-ltc-doge-mining-pool/icon.svg?v=0.2.0
 category: Development
-version: "0.1.8"
+version: "0.2.0"
 port: 3420
-description: |-
-  Work in progress. Mining does not work yet.
-
-  Ł+Ð Pool will provide solo merged-mining (Scrypt) directly to your own Litecoin and Dogecoin nodes. Right now it runs both full nodes and shows their sync progress. The pool functions are still in development.
+description: >-
+ LTC+DOGE Pool provides solo merged-mining (Scrypt) directly to your own Litecoin and Dogecoin nodes.
 developer: toalt23
 website: https://github.com/toalt23/umbrel-store-apps
 submitter: toalt23
@@ -18,7 +16,7 @@ repo: https://github.com/toalt23/umbrel-store-apps
 support: https://github.com/toalt23/umbrel-store-apps/issues
 gallery: []
 releaseNotes: >-
-  App icon with a transparent background (forces Umbrel to load the new icon). Includes 0.1.7: more realistic time left during sync, speed shown as blocks/s.
+  New name LTC+DOGE Pool and new icon. On first start you choose full or pruned nodes (50, 100 or 200 GB per chain); the nodes start only after that. Storage needed is shown right away, stalled header downloads reconnect automatically.
 dependencies: []
 path: ""
 defaultUsername: ""
