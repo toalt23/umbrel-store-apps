@@ -43,10 +43,10 @@
       <feComponentTransfer><feFuncA type="linear" slope="0.45"/></feComponentTransfer>
       <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
+  <radialGradient id="bgv" cx="50%" cy="40%" r="75%"><stop offset="0" stop-color="#1d2547"/><stop offset="0.6" stop-color="#141a33"/><stop offset="1" stop-color="#0e1524"/></radialGradient>
   </defs>
-
-  
-
+  <rect width="256" height="256" fill="url(#bgv)"/>
+  <g transform="translate(10.55 9.20) scale(0.9)">
   <g transform="translate(-95 -34)">
   <!-- DOGE coin (back) -->
   <g filter="url(#shadow)">
@@ -70,6 +70,7 @@
       <path d="M58 104 L100 86" stroke="#f3f5fa" stroke-width="11"/>
     </g>
     <ellipse cx="62" cy="54" rx="34" ry="16" transform="rotate(-35 62 54)" fill="#fff" opacity="0.18"/>
+  </g>
   </g>
   </g>
 </svg>
