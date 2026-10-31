@@ -2,9 +2,9 @@ manifestVersion: 1
 id: toalt23-pirate-mining-pool
 name: "Pirate Pool"
 tagline: Pirate Chain node, solo mining pool and wallet in one app
-icon: https://raw.githubusercontent.com/toalt23/umbrel-store-apps/master/toalt23-pirate-mining-pool/icon.svg?v=0.2.1
+icon: https://raw.githubusercontent.com/toalt23/umbrel-store-apps/master/toalt23-pirate-mining-pool/icon.svg?v=0.3.0
 category: Development
-version: "0.2.1"
+version: "0.3.0"
 port: 3430
 description: >-
  Runs your own Pirate Chain (ARRR) full node. Solo mining (Equihash 200,9) and a built-in wallet follow once the node is synced.
@@ -16,7 +16,7 @@ repo: https://github.com/toalt23/umbrel-store-apps
 support: https://github.com/toalt23/umbrel-store-apps/issues
 gallery: []
 releaseNotes: >-
-  Calmer sync view with smaller numbers, time left now shown.
+  Wallet: first-start setup after the sync (password, seed backup, check), balance in USD or EUR, receive with QR code, send with memo, transaction list, automatic shielding of mining rewards.
 dependencies: []
 path: ""
 defaultUsername: ""
