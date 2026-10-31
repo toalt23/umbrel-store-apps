@@ -2,9 +2,9 @@ manifestVersion: 1
 id: toalt23-pirate-mining-pool
 name: "Pirate Pool"
 tagline: Pirate Chain node, solo mining pool and wallet in one app
-icon: https://raw.githubusercontent.com/toalt23/umbrel-store-apps/master/toalt23-pirate-mining-pool/icon.svg?v=0.4.0
+icon: https://raw.githubusercontent.com/toalt23/umbrel-store-apps/master/toalt23-pirate-mining-pool/icon.svg?v=0.4.1
 category: Development
-version: "0.4.0"
+version: "0.4.1"
 port: 3430
 description: >-
  Your own Pirate Chain (ARRR) full node with a solo mining pool (Equihash 200,9, stratum port 3334) and a shielded wallet in one app.
@@ -16,7 +16,7 @@ repo: https://github.com/toalt23/umbrel-store-apps
 support: https://github.com/toalt23/umbrel-store-apps/issues
 gallery: []
 releaseNotes: >-
-  Solo mining pool: stratum on port 3334 with vardiff (one share about every 15 s), Equihash check of every share, luck, effort per block, best share, blocks per day, workers. Rewards go to the wallet and are shielded automatically.
+  Pirate block rewards mature after 1 block (not 100): found blocks show their confirmations, rewards are shielded after 10 confirmations. Includes the solo mining pool from 0.4.0 (stratum port 3334, vardiff, luck, effort, best share).
 dependencies: []
 path: ""
 defaultUsername: ""
