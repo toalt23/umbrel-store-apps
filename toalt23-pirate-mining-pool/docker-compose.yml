@@ -24,7 +24,7 @@ services:
       - pirated
 
   pirated:
-    image: toalt23/pirated:6.0.14-1
+    image: toalt23/pirated:6.0.14-2
     init: true
     restart: on-failure
     # the node needs time to flush its databases on shutdown
@@ -38,6 +38,9 @@ services:
       - -datadir=/data
       - -printtoconsole
       - -dbcache=512
+      # The bundled i2pd and tor daemons are not in the image
+      - -i2pdautostart=0
+      - -torautostart=0
     volumes:
       # Chain, wallet and proving parameters; the image fixes ownership itself
       - ${APP_DATA_DIR}/data/pirate:/data
