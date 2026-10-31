@@ -12,12 +12,16 @@ services:
     init: true
     restart: on-failure
     environment:
+      APP_VERSION: "0.2.0"
+      DATA_DIR: /data
       CHAIN_DIR: /chain
       RPC_HOST: toalt23-pirate-mining-pool_pirated_1
       RPC_PORT: "45453"
       RPC_USER: piraterpc
       RPC_PASSWORD: ${APP_PASSWORD}
     volumes:
+      # App settings and state
+      - ${APP_DATA_DIR}/data/app:/data
       # Read only: parameter download progress, chain size and free disk space
       - ${APP_DATA_DIR}/data/pirate:/chain:ro
     depends_on:
