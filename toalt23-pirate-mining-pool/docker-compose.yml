@@ -12,13 +12,17 @@ services:
     init: true
     restart: on-failure
     environment:
-      APP_VERSION: "0.3.1"
+      APP_VERSION: "0.4.0"
       DATA_DIR: /data
       CHAIN_DIR: /chain
       RPC_HOST: toalt23-pirate-mining-pool_pirated_1
       RPC_PORT: "45453"
       RPC_USER: piraterpc
       RPC_PASSWORD: ${APP_PASSWORD}
+      POOL_STRATUM_PORT: "3334"
+    ports:
+      # Stratum for the miners on the LAN
+      - "3334:3334"
     volumes:
       # App settings and state
       - ${APP_DATA_DIR}/data/app:/data
@@ -28,9 +32,10 @@ services:
       - pirated
 
   pirated:
-    image: toalt23/pirated:6.0.14-2
+    image: toalt23/pirated:6.0.14-3
     init: true
-    restart: on-failure
+    # Also after a clean exit: the app stops the node once to apply the mining address
+    restart: unless-stopped
     # the node needs time to flush its databases on shutdown
     stop_grace_period: 3m
     environment:
@@ -48,3 +53,5 @@ services:
     volumes:
       # Chain, wallet and proving parameters; the image fixes ownership itself
       - ${APP_DATA_DIR}/data/pirate:/data
+      # Read only: the mining address file written by the app
+      - ${APP_DATA_DIR}/data/app:/appdata:ro
