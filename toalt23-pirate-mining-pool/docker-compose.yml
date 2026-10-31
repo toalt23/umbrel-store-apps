@@ -1,0 +1,43 @@
+version: "3.7"
+
+services:
+
+  app_proxy:
+    environment:
+      APP_HOST: toalt23-pirate-mining-pool_web_1
+      APP_PORT: 3000
+
+  web:
+    image: toalt23/pirate-mining-pool-web:latest
+    init: true
+    restart: on-failure
+    environment:
+      CHAIN_DIR: /chain
+      RPC_HOST: toalt23-pirate-mining-pool_pirated_1
+      RPC_PORT: "45453"
+      RPC_USER: piraterpc
+      RPC_PASSWORD: ${APP_PASSWORD}
+    volumes:
+      # Read only: parameter download progress, chain size and free disk space
+      - ${APP_DATA_DIR}/data/pirate:/chain:ro
+    depends_on:
+      - pirated
+
+  pirated:
+    image: toalt23/pirated:6.0.14-1
+    init: true
+    restart: on-failure
+    # the node needs time to flush its databases on shutdown
+    stop_grace_period: 3m
+    environment:
+      # Written to PIRATE.conf by the entrypoint
+      RPC_USER: piraterpc
+      RPC_PASSWORD: ${APP_PASSWORD}
+    command:
+      - pirated
+      - -datadir=/data
+      - -printtoconsole
+      - -dbcache=512
+    volumes:
+      # Chain, wallet and proving parameters; the image fixes ownership itself
+      - ${APP_DATA_DIR}/data/pirate:/data
