@@ -1,22 +1,38 @@
 manifestVersion: 1
 id: toalt23-pirate-mining-pool
 name: "Pirate Pool"
-tagline: Pirate Chain node, solo mining pool and wallet in one app
-icon: https://raw.githubusercontent.com/toalt23/umbrel-store-apps/master/toalt23-pirate-mining-pool/icon.svg?v=0.5.4
+tagline: Solo-mine Pirate Chain on your own node, with a private wallet built in
+icon: https://raw.githubusercontent.com/toalt23/umbrel-store-apps/master/toalt23-pirate-mining-pool/icon.svg?v=0.5.5
 category: Development
-version: "0.5.4"
+version: "0.5.5"
 port: 3430
-description: >-
- Your own Pirate Chain (ARRR) full node with a solo mining pool (Equihash 200,9, stratum port 3334) and a shielded wallet in one app.
+description: |-
+  Mine Pirate Chain (ARRR) solo on your Umbrel. Pirate Pool runs a full Pirate node with a built-in stratum pool and a shielded wallet, so your Equihash ASICs get their work straight from your own node. There are no pool fees and no third party in between, and every block you find pays the full reward to you.
+
+  Follow your mining live:
+
+  - Pool hashrate over 1, 3 or 12 hours
+  - Blocks found and pool effort since the last block
+  - Every worker with its hashrate, share difficulty and best share
+  - Found blocks on their way to 10 confirmations
+
+  Rewards stay private. Block rewards first land on the mining address the app creates, then they are automatically shielded into your wallet after 10 confirmations. From the wallet you can receive and send ARRR, add an encrypted memo and back up your 24-word seed. Sending and showing the seed need a wallet password.
+
+  Setup is quick: the first start downloads the official Pirate chain snapshot (about 30 GB, checksum verified) and then syncs only the newest blocks. During setup the app needs about 75 GB of free disk space. Once the node is synced, set your wallet password, write down your seed and point your miners at the stratum address shown in Settings.
 developer: toalt23
 website: https://github.com/toalt23/umbrel-store-apps
 submitter: toalt23
 submission: https://github.com/toalt23/umbrel-store-apps
 repo: https://github.com/toalt23/umbrel-store-apps
 support: https://github.com/toalt23/umbrel-store-apps/issues
-gallery: []
+gallery:
+  - https://raw.githubusercontent.com/toalt23/umbrel-store-apps/master/toalt23-pirate-mining-pool/gallery/1-pool.png
+  - https://raw.githubusercontent.com/toalt23/umbrel-store-apps/master/toalt23-pirate-mining-pool/gallery/2-wallet.png
+  - https://raw.githubusercontent.com/toalt23/umbrel-store-apps/master/toalt23-pirate-mining-pool/gallery/3-node.png
+  - https://raw.githubusercontent.com/toalt23/umbrel-store-apps/master/toalt23-pirate-mining-pool/gallery/4-settings.png
+  - https://raw.githubusercontent.com/toalt23/umbrel-store-apps/master/toalt23-pirate-mining-pool/gallery/5-sync.png
 releaseNotes: >-
-  New pool overview: pool hashrate, network hashrate, blocks found (with a short animation on new blocks) and pool effort with the best share since the last block. Worker best shares now reset with each found block.
+  The pool tab now shows a pool hashrate chart over 1, 3 or 12 hours instead of blocks per day. New store description and screenshots.
 dependencies: []
 path: ""
 defaultUsername: ""
