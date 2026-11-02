@@ -2,9 +2,9 @@ manifestVersion: 1
 id: toalt23-pirate-mining-pool
 name: "Pirate Pool"
 tagline: Pirate Chain node, solo mining pool and wallet in one app
-icon: https://raw.githubusercontent.com/toalt23/umbrel-store-apps/master/toalt23-pirate-mining-pool/icon.svg?v=0.5.2
+icon: https://raw.githubusercontent.com/toalt23/umbrel-store-apps/master/toalt23-pirate-mining-pool/icon.svg?v=0.5.3
 category: Development
-version: "0.5.2"
+version: "0.5.3"
 port: 3430
 description: >-
  Your own Pirate Chain (ARRR) full node with a solo mining pool (Equihash 200,9, stratum port 3334) and a shielded wallet in one app.
@@ -16,7 +16,7 @@ repo: https://github.com/toalt23/umbrel-store-apps
 support: https://github.com/toalt23/umbrel-store-apps/issues
 gallery: []
 releaseNotes: >-
-  Fixes the chain bootstrap being skipped (download size was not read). The first start now downloads the official Pirate chain bootstrap (about 30 GB, SHA256 checked, resumes after restarts) instead of syncing everything from peers. Needs about 75 GB free disk space during the setup.
+  "Last share" no longer shows "-1 d -1 h ago" for a moment. Fixes the chain bootstrap being skipped (download size was not read). The first start now downloads the official Pirate chain bootstrap (about 30 GB, SHA256 checked, resumes after restarts) instead of syncing everything from peers. Needs about 75 GB free disk space during the setup.
 dependencies: []
 path: ""
 defaultUsername: ""
