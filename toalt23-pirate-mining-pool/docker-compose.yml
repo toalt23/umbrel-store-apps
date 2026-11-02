@@ -12,7 +12,7 @@ services:
     init: true
     restart: on-failure
     environment:
-      APP_VERSION: "0.4.1"
+      APP_VERSION: "0.5.0"
       DATA_DIR: /data
       CHAIN_DIR: /chain
       RPC_HOST: toalt23-pirate-mining-pool_pirated_1
@@ -32,7 +32,7 @@ services:
       - pirated
 
   pirated:
-    image: toalt23/pirated:6.0.14-3
+    image: toalt23/pirated:6.0.14-4
     init: true
     # Also after a clean exit: the app stops the node once to apply the mining address
     restart: unless-stopped
