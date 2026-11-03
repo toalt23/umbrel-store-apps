@@ -1,0 +1,23 @@
+manifestVersion: 1
+id: toalt23-bch-mining-pool
+name: "BCH Pool"
+tagline: Pruned Bitcoin Cash node with a solo mining pool
+icon: https://raw.githubusercontent.com/toalt23/umbrel-store-apps/master/toalt23-bch-mining-pool/icon.svg?v=0.1.0
+category: Development
+version: "0.1.0"
+port: 3440
+description: >-
+ Runs your own pruned Bitcoin Cash Node (keeps 10 GB of blocks). Solo mining (SHA-256) follows once the node is synced.
+developer: toalt23
+website: https://github.com/toalt23/umbrel-store-apps
+submitter: toalt23
+submission: https://github.com/toalt23/umbrel-store-apps
+repo: https://github.com/toalt23/umbrel-store-apps
+support: https://github.com/toalt23/umbrel-store-apps/issues
+gallery: []
+releaseNotes: >-
+  First version: pruned Bitcoin Cash Node 29.2.0 with the sync view.
+dependencies: []
+path: ""
+defaultUsername: ""
+defaultPassword: ""
