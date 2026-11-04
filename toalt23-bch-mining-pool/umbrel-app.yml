@@ -16,7 +16,7 @@ repo: https://github.com/toalt23/umbrel-store-apps
 support: https://github.com/toalt23/umbrel-store-apps/issues
 gallery: []
 releaseNotes: >-
-  Use your BCH address as miner username (address.worker) and that miner pays to its own address, so the miner can verify the payout in the coinbase. New "Next block" card with live transactions, size, fees and reward. Workers show their share count.
+  New "Next block" card with live transactions, size, fees and reward of the block being mined. Workers show their share count.
 dependencies: []
 path: ""
 defaultUsername: ""
