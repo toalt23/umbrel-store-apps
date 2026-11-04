@@ -1,22 +1,41 @@
 manifestVersion: 1
 id: toalt23-bch-mining-pool
 name: "BCH Pool"
-tagline: Pruned Bitcoin Cash node with a solo mining pool
-icon: https://raw.githubusercontent.com/toalt23/umbrel-store-apps/master/toalt23-bch-mining-pool/icon.svg?v=0.3.1
+tagline: Solo-mine Bitcoin Cash on your own pruned node
+icon: https://raw.githubusercontent.com/toalt23/umbrel-store-apps/master/toalt23-bch-mining-pool/icon.svg?v=0.3.2
 category: Development
-version: "0.3.1"
+version: "0.3.2"
 port: 3440
-description: >-
- Pruned Bitcoin Cash Node (keeps 10 GB of blocks) with a built-in solo mining pool for SHA-256 miners like NerdQaxe, Bitaxe or Antminer. Stratum on port 3335, every block pays the full reward to your own address.
+description: |-
+  Mine Bitcoin Cash (BCH) solo on your Umbrel. BCH Pool runs a pruned Bitcoin Cash Node with a built-in SHA-256 stratum pool, so your NerdQaxe, Bitaxe, NerdAxe or Antminer gets its work straight from your own node. There are no pool fees and no third party in between, and every block you find pays the full reward to your own address.
+
+  Follow your mining live:
+
+  - Best share since the last block on a log scale, where 100% is a block
+  - The next block with its transactions, size, fees and reward
+  - Pool hashrate over 1, 3 or 12 hours
+  - Every worker with hashrate, share difficulty, best share and share count, plus its own chart in the details
+  - Found blocks on their way to 100 confirmations
+
+  The pool supports version rolling (AsicBoost) and adjusts the share difficulty per worker. Every miner gets a random extranonce, renewed with every block for miners that support it.
+
+  The node keeps only the newest 10 GB of blocks. The first sync downloads and checks the whole chain once and takes about a day; the app needs about 20 GB of free disk space. Once the node is in sync, set your Bitcoin Cash address in Settings (CashAddr, with or without the bitcoincash: prefix, as shown by Exodus, Electron Cash or Cashonize) and point your miners at the stratum address shown there, port 3335.
+
+  Tip for AxeOS: its coinbase verification only knows Bitcoin address formats, not CashAddr, so turn it off for this pool.
 developer: toalt23
 website: https://github.com/toalt23/umbrel-store-apps
 submitter: toalt23
 submission: https://github.com/toalt23/umbrel-store-apps
 repo: https://github.com/toalt23/umbrel-store-apps
 support: https://github.com/toalt23/umbrel-store-apps/issues
-gallery: []
+gallery:
+  - https://raw.githubusercontent.com/toalt23/umbrel-store-apps/master/toalt23-bch-mining-pool/gallery/1-pool.png
+  - https://raw.githubusercontent.com/toalt23/umbrel-store-apps/master/toalt23-bch-mining-pool/gallery/2-workers.png
+  - https://raw.githubusercontent.com/toalt23/umbrel-store-apps/master/toalt23-bch-mining-pool/gallery/3-worker.png
+  - https://raw.githubusercontent.com/toalt23/umbrel-store-apps/master/toalt23-bch-mining-pool/gallery/4-settings.png
+  - https://raw.githubusercontent.com/toalt23/umbrel-store-apps/master/toalt23-bch-mining-pool/gallery/5-sync.png
 releaseNotes: >-
-  Only the payout address from Settings is paid again, an address in the miner username is ignored. Keeps the "Next block" card and the share counts from 0.3.0.
+  New store description and screenshots. The time labels of the hashrate chart no longer get cut off at the right edge.
 dependencies: []
 path: ""
 defaultUsername: ""
