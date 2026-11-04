@@ -2,9 +2,9 @@ manifestVersion: 1
 id: toalt23-bch-mining-pool
 name: "BCH Pool"
 tagline: Pruned Bitcoin Cash node with a solo mining pool
-icon: https://raw.githubusercontent.com/toalt23/umbrel-store-apps/master/toalt23-bch-mining-pool/icon.svg?v=0.3.0
+icon: https://raw.githubusercontent.com/toalt23/umbrel-store-apps/master/toalt23-bch-mining-pool/icon.svg?v=0.3.1
 category: Development
-version: "0.3.0"
+version: "0.3.1"
 port: 3440
 description: >-
  Pruned Bitcoin Cash Node (keeps 10 GB of blocks) with a built-in solo mining pool for SHA-256 miners like NerdQaxe, Bitaxe or Antminer. Stratum on port 3335, every block pays the full reward to your own address.
@@ -16,7 +16,7 @@ repo: https://github.com/toalt23/umbrel-store-apps
 support: https://github.com/toalt23/umbrel-store-apps/issues
 gallery: []
 releaseNotes: >-
-  New "Next block" card with live transactions, size, fees and reward of the block being mined. Workers show their share count.
+  Only the payout address from Settings is paid again, an address in the miner username is ignored. Keeps the "Next block" card and the share counts from 0.3.0.
 dependencies: []
 path: ""
 defaultUsername: ""
