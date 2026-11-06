@@ -4,7 +4,7 @@ name: ZEC Mining Node
 tagline: Solo-mine Zcash on your own full node
 icon: https://raw.githubusercontent.com/toalt23/umbrel-store-apps/master/toalt23-zec-mining-pool/icon.svg
 category: Development
-version: "1.12.6"
+version: "1.12.7"
 port: 3000
 description: |-
   Mine Zcash solo on your Umbrel. ZEC Mining Node runs a Zakura full node with a built-in stratum pool, so your Equihash ASICs get their work straight from your own node. There are no pool fees and no third party in between, and every block you find pays the full miner reward to your own address.
@@ -31,7 +31,7 @@ gallery:
   - https://raw.githubusercontent.com/toalt23/umbrel-store-apps/master/toalt23-zec-mining-pool/gallery/4-settings.png
   - https://raw.githubusercontent.com/toalt23/umbrel-store-apps/master/toalt23-zec-mining-pool/gallery/5-sync.png
 releaseNotes: >-
-  Updates the Zakura full node to the latest release (1.8.3).
+  Shows the real block reward after NU7, read straight from the block template of your node instead of a fixed value.
 dependencies: []
 path: ""
 defaultUsername: ""
