@@ -30,7 +30,7 @@ gallery:
   - https://raw.githubusercontent.com/toalt23/umbrel-store-apps/master/toalt23-entropical-pool/gallery/4-explorer.png
   - https://raw.githubusercontent.com/toalt23/umbrel-store-apps/master/toalt23-entropical-pool/gallery/5-settings.png
 releaseNotes: >-
-  Home miner blocks now track Solo CK Pool (hosted and self-hosted together), Public Pool, Parasite, FutureBit Apollo and AtlasPool. The latest finds list shows every home block of the last 12 months, scrolls inside its card and can be dragged with the mouse. Best share per worker in orange, a calmer best share headline and a slightly smaller next block timer.
+  Home miner blocks now track Solo CK Pool (hosted and self-hosted together), Public Pool, Parasite and FutureBit Apollo. The latest finds list shows every home block of the last 12 months, scrolls inside its card and can be dragged with the mouse. Best share per worker in orange, a calmer best share headline and a slightly smaller next block timer.
 dependencies:
   - bitcoin
 path: ""
