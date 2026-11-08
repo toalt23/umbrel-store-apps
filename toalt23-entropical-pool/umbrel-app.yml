@@ -4,7 +4,7 @@ name: "Entropical Pool"
 tagline: Solo-mine Bitcoin on your own node, with fresh entropy for every block
 icon: https://raw.githubusercontent.com/toalt23/umbrel-store-apps/master/toalt23-entropical-pool/icon.svg?v=0.2.2
 category: bitcoin
-version: "0.3.0"
+version: "0.3.1"
 port: 3450
 description: |-
   Solo-mine Bitcoin on your Umbrel, straight from your own Bitcoin Node app. Entropical Pool is a stratum pool for SHA-256 miners like NerdQaxe, Bitaxe, NerdAxe or Antminer. There are no pool fees and no third party: every block a miner finds pays the full reward to the Bitcoin address in its username.
@@ -30,7 +30,7 @@ gallery:
   - https://raw.githubusercontent.com/toalt23/umbrel-store-apps/master/toalt23-entropical-pool/gallery/4-explorer.png
   - https://raw.githubusercontent.com/toalt23/umbrel-store-apps/master/toalt23-entropical-pool/gallery/5-settings.png
 releaseNotes: >-
-  Explorer: the last 35 blocks, drag them sideways with the mouse, and two new cards: blocks found by home and solo miners (Solo CKPool, Public Pool, Parasite, Braiins Solo, FutureBit Apollo and more, read from the coinbase tag on your own node) this month, this year and in the last 12 months, and your own solo odds. Tx updates: pick in the entropy card whether every, every 2nd, 3rd or 4th, or no transaction update becomes a new job. The coinbase no longer carries a block nonce, fresh entropy per job comes from the extranonce1 for miners with extranonce.subscribe. Best share card: a bigger best share and the top 5 of all time, found blocks marked. Workers: click anywhere on a row, the payout address now sits in the worker dialog.
+  Layout polish: a bigger timer in the next block card, the entropy card split into settings and the extranonce1 per worker, the home miner blocks split into stats and the latest finds. The solo odds card is gone, and hovering a worker no longer shows a scroll bar.
 dependencies:
   - bitcoin
 path: ""
