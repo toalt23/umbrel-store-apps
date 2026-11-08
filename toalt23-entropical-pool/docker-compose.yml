@@ -12,7 +12,7 @@ services:
     init: true
     restart: on-failure
     environment:
-      APP_VERSION: "0.3.2"
+      APP_VERSION: "0.3.3"
       DATA_DIR: /data
       # Exported by Umbrel's Bitcoin Node app (dependency)
       RPC_HOST: ${APP_BITCOIN_NODE_IP}
