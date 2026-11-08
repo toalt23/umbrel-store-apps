@@ -4,7 +4,7 @@ name: "Entropical Pool"
 tagline: Solo-mine Bitcoin on your own node, with fresh entropy for every block
 icon: https://raw.githubusercontent.com/toalt23/umbrel-store-apps/master/toalt23-entropical-pool/icon.svg?v=0.2.2
 category: bitcoin
-version: "0.3.4"
+version: "0.3.5"
 port: 3450
 description: |-
   Solo-mine Bitcoin on your Umbrel, straight from your own Bitcoin Node app. Entropical Pool is a stratum pool for SHA-256 miners like NerdQaxe, Bitaxe, NerdAxe or Antminer. There are no pool fees and no third party: every block a miner finds pays the full reward to the Bitcoin address in its username.
@@ -30,7 +30,7 @@ gallery:
   - https://raw.githubusercontent.com/toalt23/umbrel-store-apps/master/toalt23-entropical-pool/gallery/4-explorer.png
   - https://raw.githubusercontent.com/toalt23/umbrel-store-apps/master/toalt23-entropical-pool/gallery/5-settings.png
 releaseNotes: >-
-  Polished best share card: bigger percent, slightly taller progress bar, top 3 moved up. Smaller next block timer and a shorter settings hint.
+  Top 3 all time list sits a little lower in the best share card.
 dependencies:
   - bitcoin
 path: ""
