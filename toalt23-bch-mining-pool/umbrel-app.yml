@@ -2,7 +2,7 @@ manifestVersion: 1
 id: toalt23-bch-mining-pool
 name: "Minted"
 tagline: Solo-mine Bitcoin Cash on your own pruned node
-icon: https://raw.githubusercontent.com/toalt23/umbrel-store-apps/master/toalt23-bch-mining-pool/icon.svg?v=0.4.0
+icon: https://raw.githubusercontent.com/toalt23/umbrel-store-apps/master/toalt23-bch-mining-pool/icon.svg?v=0.4.0-1
 category: Development
 version: "0.4.0"
 port: 3440
