@@ -1,23 +1,24 @@
 manifestVersion: 1
 id: toalt23-zec-mining-pool
-name: ZEC Mining Node
-tagline: Solo-mine Zcash on your own full node
-icon: https://raw.githubusercontent.com/toalt23/umbrel-store-apps/master/toalt23-zec-mining-pool/icon.svg
+name: Z-Nonce
+tagline: ZEC solo mining pool with fresh entropy on every job
+icon: https://raw.githubusercontent.com/toalt23/umbrel-store-apps/master/toalt23-zec-mining-pool/icon.svg?v=2.0.0
 category: Development
-version: "1.12.7"
+version: "2.0.0"
 port: 3000
 description: |-
-  Mine Zcash solo on your Umbrel. ZEC Mining Node runs a Zakura full node with a built-in stratum pool, so your Equihash ASICs get their work straight from your own node. There are no pool fees and no third party in between, and every block you find pays the full miner reward to your own address.
+  Mine Zcash solo on your Umbrel. Z-Nonce runs a Zakura full node with a built-in stratum pool, so your Equihash ASICs get their work straight from your own node. There are no pool fees and no third party in between, and every block you find pays the full miner reward to your own address.
 
-  Follow your mining live:
+  Every miner gets a random Extranonce1, renewed with every new job. Each job your miners work on is fresh, and you can watch it happen.
 
-  - Pool hashrate over 3 hours, a day or 7 days
-  - Your chance of finding a block within a day, a week or a month
-  - Every worker with its hashrate, reject rate and best share
-  - Found blocks on their way to 100 confirmations
-  - A leaderboard of your closest calls
+  Follow your mining live on one page:
 
-  Setup takes a minute: set your payout address, pick your miner and copy the connection details. The first blockchain sync takes several hours. You can set your payout address while it runs and connect your miners once it is done.
+  - The block rhythm of the network with a live counter and your own Pool Hits
+  - Pool hashrate over 1, 3 or 8 hours and the pool effort since your last block
+  - Every worker with a live share field, its current Extranonce1 and whether it uses the fresh entropy
+  - Your top 5 shares and all found blocks
+
+  Setup takes a minute: set your payout address, let the node sync, then copy the connection details into your miner. The first blockchain sync takes several hours. The pool opens once the sync is done and a payout address is set.
 developer: toalt23
 website: https://github.com/toalt23/umbrel-store-apps
 submitter: toalt23
@@ -31,7 +32,9 @@ gallery:
   - https://raw.githubusercontent.com/toalt23/umbrel-store-apps/master/toalt23-zec-mining-pool/gallery/4-settings.png
   - https://raw.githubusercontent.com/toalt23/umbrel-store-apps/master/toalt23-zec-mining-pool/gallery/5-sync.png
 releaseNotes: >-
-  Shows the real block reward after NU7, read straight from the block template of your node instead of a fixed value.
+  ZEC Mining Node is now Z-Nonce: a new name, a new logo and a new one-page dashboard with block rhythm, live share fields per worker and a worker detail view.
+  Every miner now gets a random Extranonce1 that is renewed with every job. Mempool-only changes no longer interrupt your miners. A new job comes with every block, plus a heartbeat after 60 seconds without one.
+  Payout addresses are checked with their full checksum, and the pool opens only once the node is synced and a payout address is set.
 dependencies: []
 path: ""
 defaultUsername: ""
