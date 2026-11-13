@@ -4,7 +4,7 @@ name: Z-Nonce
 tagline: ZEC solo mining pool with fresh entropy on every job
 icon: https://raw.githubusercontent.com/toalt23/umbrel-store-apps/master/toalt23-zec-mining-pool/icon.svg?v=2.0.0
 category: Development
-version: "2.0.0"
+version: "2.0.1"
 port: 3000
 description: |-
   Mine Zcash solo on your Umbrel. Z-Nonce runs a Zakura full node with a built-in stratum pool, so your Equihash ASICs get their work straight from your own node. There are no pool fees and no third party in between, and every block you find pays the full miner reward to your own address.
@@ -32,9 +32,9 @@ gallery:
   - https://raw.githubusercontent.com/toalt23/umbrel-store-apps/master/toalt23-zec-mining-pool/gallery/4-settings.png
   - https://raw.githubusercontent.com/toalt23/umbrel-store-apps/master/toalt23-zec-mining-pool/gallery/5-sync.png
 releaseNotes: >-
-  ZEC Mining Node is now Z-Nonce: a new name, a new logo and a new one-page dashboard with block rhythm, live share fields per worker and a worker detail view.
-  Every miner now gets a random Extranonce1 that is renewed with every job. Mempool-only changes no longer interrupt your miners. A new job comes with every block, plus a heartbeat after 60 seconds without one.
-  Payout addresses are checked with their full checksum, and the pool opens only once the node is synced and a payout address is set.
+  New tile with the best share of the current session. Pool effort now shows two decimals.
+  The block rhythm shows block number, duration and time on hover or tap, and marks bars estimated after a restart. Phones show the last 30 blocks.
+  Slimmer header.
 dependencies: []
 path: ""
 defaultUsername: ""
