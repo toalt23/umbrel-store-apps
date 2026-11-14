@@ -4,7 +4,7 @@ name: Z-Nonce
 tagline: ZEC solo mining pool with fresh entropy on every job
 icon: https://raw.githubusercontent.com/toalt23/umbrel-store-apps/master/toalt23-zec-mining-pool/icon.svg?v=2.0.0
 category: Development
-version: "2.0.3"
+version: "2.0.4"
 port: 3000
 description: |-
   Mine Zcash solo on your Umbrel. Z-Nonce runs a Zakura full node with a built-in stratum pool, so your Equihash ASICs get their work straight from your own node. There are no pool fees and no third party in between, and every block you find pays the full miner reward to your own address.
@@ -32,8 +32,9 @@ gallery:
   - https://raw.githubusercontent.com/toalt23/umbrel-store-apps/master/toalt23-zec-mining-pool/gallery/4-settings.png
   - https://raw.githubusercontent.com/toalt23/umbrel-store-apps/master/toalt23-zec-mining-pool/gallery/5-sync.png
 releaseNotes: >-
-  The session best share now starts fresh once no miner has been connected for 5 minutes, so every mining day gets its own. Short drops keep it.
-  The pool hashrate tile now says what it shows: the estimate from the last 10 minutes.
+  The share field now colours each share by its real difficulty: deeper gold for small shares, brighter as they grow, and a glow only from 100k up.
+  The best share tile is now simply called Best share, and the effort tile reads "expected ~289.9 days".
+  Worker best values and the tabs are a bit larger and easier to read.
 dependencies: []
 path: ""
 defaultUsername: ""
