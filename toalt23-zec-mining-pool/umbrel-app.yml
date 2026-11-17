@@ -4,7 +4,7 @@ name: Z-Nonce
 tagline: ZEC solo mining pool with fresh entropy on every job
 icon: https://raw.githubusercontent.com/toalt23/umbrel-store-apps/master/toalt23-zec-mining-pool/icon.svg?v=2.0.0
 category: Development
-version: "2.0.7"
+version: "2.0.8"
 port: 3000
 description: |-
   Mine Zcash solo on your Umbrel. Z-Nonce runs a Zakura full node with a built-in stratum pool, so your Equihash ASICs get their work straight from your own node. There are no pool fees and no third party in between, and every block you find pays the full miner reward to your own address.
@@ -32,8 +32,8 @@ gallery:
   - https://raw.githubusercontent.com/toalt23/umbrel-store-apps/master/toalt23-zec-mining-pool/gallery/4-settings.png
   - https://raw.githubusercontent.com/toalt23/umbrel-store-apps/master/toalt23-zec-mining-pool/gallery/5-sync.png
 releaseNotes: >-
-  The low difficulty preset is now 48 instead of 24, which suits miners like the Innosilicon A9 better. Settings now names the A9 as the example for low.
-  Miners using the "low" password pick up the new value the next time they connect.
+  New switch in the worker details: "Fresh extranonce1 every block" can now be turned off per worker, for miners that reject everything after a change. Off takes effect right away, the worker goes back to its original extranonce1, and the setting survives restarts.
+  The low difficulty preset is now 64.
 dependencies: []
 path: ""
 defaultUsername: ""
