@@ -18,8 +18,9 @@ gewohnt installieren und aktualisieren.
 
 | App | ID | Beschreibung |
 |---|---|---|
+| **Z-Nonce** | `toalt23-zec-mining-pool` | Solo-Mining direkt gegen den eigenen Zcash-Node — Zakura Full Node, ZIP-301 Stratum-Server und Web-UI für Mining-Adresse, Share-Difficulty und Worker-Übersicht. Stratum auf Port `3333`, Web-UI auf Port `3000`. |
 | **BCH Pool** | `toalt23-bch-mining-pool` | Gepruneter Bitcoin Cash Node (BCHN, 10 GB Blöcke) mit Solo-Mining-Pool für SHA-256-Miner (Version Rolling). Stratum auf Port `3335`, Web-UI auf Port `3440`. |
-| **Entropical Pool** | `toalt23-entropical-pool` | Solo-Bitcoin-Pool auf der Umbrel Bitcoin-Node-App (Abhängigkeit, kein eigener Node). Payout an die Adresse im Miner-Usernamen, frische Zufalls-Entropy in jedem Block, Explorer der letzten 25 Blöcke. Stratum auf Port `3336`, Web-UI auf Port `3450`. |
+| **Entropic Pool** | `toalt23-entropic-pool` | Solo-Bitcoin-Pool auf der Umbrel Bitcoin-Node-App (Abhängigkeit, kein eigener Node). Payout an die Adresse im Miner-Usernamen, frische Zufalls-Entropy in jedem Block, Explorer mit Home-Miner-Statistik. Freischaltung einmalig per Lizenzschlüssel. Stratum auf Port `3336`, Web-UI auf Port `3450`. |
 
 ## Aufbau
 

@@ -1,13 +1,13 @@
 manifestVersion: 1
-id: toalt23-entropical-pool
-name: "Entropical Pool"
+id: toalt23-entropic-pool
+name: "Entropic Pool"
 tagline: Solo-mine Bitcoin on your own node, with fresh entropy for every block
-icon: https://raw.githubusercontent.com/toalt23/umbrel-store-apps/master/toalt23-entropical-pool/icon.svg?v=0.2.2
+icon: https://raw.githubusercontent.com/toalt23/umbrel-store-apps/master/toalt23-entropic-pool/icon.svg?v=0.4.0
 category: bitcoin
-version: "0.3.5"
+version: "0.4.0"
 port: 3450
 description: |-
-  Solo-mine Bitcoin on your Umbrel, straight from your own Bitcoin Node app. Entropical Pool is a stratum pool for SHA-256 miners like NerdQaxe, Bitaxe, NerdAxe or Antminer. There are no pool fees and no third party: every block a miner finds pays the full reward to the Bitcoin address in its username.
+  Solo-mine Bitcoin on your Umbrel, straight from your own Bitcoin Node app. Entropic Pool is a stratum pool for SHA-256 miners like NerdQaxe, Bitaxe, NerdAxe or Antminer. There are no pool fees and no third party: every block a miner finds pays the full reward to the Bitcoin address in its username.
 
   Fresh entropy with every job: each miner gets a random extranonce1, and miners that support extranonce.subscribe get a new one with every job, on a new block and on every transaction update. Nothing counts up from zero, nothing is reused.
 
@@ -17,6 +17,8 @@ description: |-
   - A small explorer: the last 25 blocks with fees and miners, mempool, fee estimates and the next difficulty adjustment
 
   Point your miners at the stratum address shown in Settings (port 3336) and use your Bitcoin address as username, for example bc1q….nerdaxe-1. Miners without a valid address are refused with a message. Needs the Bitcoin Node app, pruned works.
+
+  The pool is activated once with a license key from the developer; until then the web UI and stratum stay locked.
 developer: toalt23
 website: https://github.com/toalt23/umbrel-store-apps
 submitter: toalt23
@@ -24,13 +26,13 @@ submission: https://github.com/toalt23/umbrel-store-apps
 repo: https://github.com/toalt23/umbrel-store-apps
 support: https://github.com/toalt23/umbrel-store-apps/issues
 gallery:
-  - https://raw.githubusercontent.com/toalt23/umbrel-store-apps/master/toalt23-entropical-pool/gallery/1-pool.png
-  - https://raw.githubusercontent.com/toalt23/umbrel-store-apps/master/toalt23-entropical-pool/gallery/2-entropy.png
-  - https://raw.githubusercontent.com/toalt23/umbrel-store-apps/master/toalt23-entropical-pool/gallery/3-worker.png
-  - https://raw.githubusercontent.com/toalt23/umbrel-store-apps/master/toalt23-entropical-pool/gallery/4-explorer.png
-  - https://raw.githubusercontent.com/toalt23/umbrel-store-apps/master/toalt23-entropical-pool/gallery/5-settings.png
+  - https://raw.githubusercontent.com/toalt23/umbrel-store-apps/master/toalt23-entropic-pool/gallery/1-pool.png
+  - https://raw.githubusercontent.com/toalt23/umbrel-store-apps/master/toalt23-entropic-pool/gallery/2-entropy.png
+  - https://raw.githubusercontent.com/toalt23/umbrel-store-apps/master/toalt23-entropic-pool/gallery/3-worker.png
+  - https://raw.githubusercontent.com/toalt23/umbrel-store-apps/master/toalt23-entropic-pool/gallery/4-explorer.png
+  - https://raw.githubusercontent.com/toalt23/umbrel-store-apps/master/toalt23-entropic-pool/gallery/5-settings.png
 releaseNotes: >-
-  Top 3 all time list sits a little lower in the best share card.
+  New name Entropic Pool with a new icon and a calmer, more compact design. The pool is activated once with a license key. The app ID changed, so this is a fresh install: remove Entropical Pool first.
 dependencies:
   - bitcoin
 path: ""
